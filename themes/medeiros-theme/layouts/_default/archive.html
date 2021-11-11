@@ -1,0 +1,24 @@
+{{ define "main" }}
+
+<main class="container" id="archive">
+    <section class="p20 card">
+
+        <h1>Arquivo</h1>
+
+        <div>
+            {{ range .Site.RegularPages.GroupByDate "01/2006" }}
+                {{ range .Pages }}
+                <em class="limited-width">{{ .Date.Format "01.02.06" }}</em>
+                <em class="full-width">{{ .Date.Format "02" }} de {{ index .Site.Data.months (.Date.Format "1")}} de {{ .Date.Format "2006"}}</em>
+                 - <a href="{{ .Permalink | absURL }}">
+                        {{ .Title }}
+                    </a><br/>
+                {{ end }}
+                <br/>
+            {{ end }}
+        </div>
+
+    </section>
+</main>
+
+{{ end }}

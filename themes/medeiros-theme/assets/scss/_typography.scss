@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap');
+@import url('https://fonts.cdnfonts.com/css/arial-rounded-mt-bold');
+
+body {
+    font-family: 'Nunito Sans', sans-serif;
+}
+h1, h2, h3 {
+    font-family: 'Arial Rounded MT Bold', sans-serif;
+    margin-bottom: 12px;
+}
+h1 {
+    font-size: 20pt;
+}
+h2 {
+    font-size: 18pt;
+}
+h3 {
+    font-size: 16pt
+}
+h1, h2 {
+    font-weight: 800;
+}
+h3 {
+    font-weight: 800;
+}
+p, li {
+    line-height: 20pt;
+}
+p, li {
+    font-size: 13pt;
+}
+main {
+
+    p, ul {
+        margin-bottom: 12px;
+        
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+    img {
+        margin: 20px 0;
+    }   
+}
+hr {
+    height: 1px;
+    background: black;
+    margin: 10px 0;
+}
+[role="doc-endnote"] p {
+    font-size: 10pt!important;
+    line-height: 12pt;
+}
+table {
+    border-collapse: collapse;
+    width: auto;
+    table-layout:fixed;
+}
+th, td {
+    border: 1px solid black;
+    padding: 10px;
+    white-space: nowrap;
+}
+.table-wrapper {
+    overflow-x: auto;
+    max-width: 100%;
+    margin: 20px 0!important;
+    padding: 0!important;
+}

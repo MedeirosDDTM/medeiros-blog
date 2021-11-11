@@ -1,0 +1,31 @@
+{{ define "main" }}
+
+<main class="container" id="archive">
+    <section class="p20 card">
+
+        <h1>Pesquisar em artigos</h1>
+
+        <form id="search">
+        <div id="search-box">
+            <input id="search-input" /><button class="btn">Buscar</button>
+        </div>
+        </form>
+
+        <div id="search-result">
+        </div>
+
+        <template id="search-template" hidden>
+            <article class="content post">
+              <h3 class="post-title"><a class="summary-title-link" target="_blank"></a></h3>
+              <summary class="summary"></summary>
+            </article>
+          </template>
+
+    </section>
+</main>
+
+<script src="https://unpkg.com/lunr/lunr.js"></script>
+<script src='{{ "js/search.js" | absURL }}'></script>
+
+
+{{ end }}

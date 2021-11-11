@@ -1,0 +1,31 @@
+<header id="main-header" class="card p10">
+    <div class="container">
+        <section class="logo">
+            <a href="{{ .Site.BaseURL }}"><img src="{{ "img/logo.png" | absURL }}" alt="Logo do site"/></a>
+        </section>
+        <nav class="navigation">
+            <ul>
+                <li><a href="{{ "posts/" | absURL}}">Posts</a></li>
+                <li><a href="{{ "search/" | absURL}}">Pesquisar</a></li>
+            </ul>
+        </nav>
+        <nav id="menu-icon">
+            <a href="#menu"><img src="{{ "img/menu.png" | absURL }}" alt="menu" /></a>
+        </nav>
+    </div>
+</header>
+
+<nav id="responsive-menu">
+    <a href="#" id="close-menu">X</a>
+    <a href="{{ "posts/" | absURL}}">Posts</a>
+    <a href="{{ "search/" | absURL}}">Pesquisar</a>
+</nav>
+
+<script>
+    document.getElementById('menu-icon').onclick = () => {
+        document.body.classList.toggle('menu-active');
+    };
+    document.getElementById('close-menu').onclick = () => {
+        document.body.classList.toggle('menu-active');
+    };
+</script>

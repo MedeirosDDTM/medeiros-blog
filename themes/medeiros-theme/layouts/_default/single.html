@@ -1,0 +1,39 @@
+{{ define "main" }}
+
+<main class="container" id="post">
+    <section class="content card p20">
+        <header id="post-header">
+            <h1>{{ .Title }}</h1>
+            <h2>{{ .Date.Format "02" }} de {{ index .Site.Data.months (.Date.Format "1")}} de {{ .Date.Format "2006"}}</h2>
+        </header>
+
+        {{ .Content }}
+
+    </section>
+    <aside id="post-aside">
+        <div id="related" class=" card p20 mb10">
+            <h2>Continue lendo:</h2>
+        <script src={{ "js/reccomendations.js" | absURL }}></script>
+        <div id="related-container"></div>
+        </div>
+        {{ partial "tag-cloud.html" . }}
+    </aside>
+</main>
+
+<script>
+    const div = document.createElement('div');
+    div.classList.add('table-wrapper');
+
+    function wrap(el, wrapper) {
+        el.parentNode.insertBefore(wrapper, el);
+        wrapper.appendChild(el);
+    }
+
+    document.querySelectorAll('table').forEach(el => {
+        wrap(el, div.cloneNode(0));
+    });
+</script>
+
+{{ partial "post-read.html" . }}
+
+{{ end }}

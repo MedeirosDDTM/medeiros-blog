@@ -1,0 +1,26 @@
+{{ define "main" }}
+
+<main class="container">
+    <section class="p20 card">
+
+        <h1>Veja estes posts:</h1>
+
+        <div id="posts-list">
+            {{ $paginator := .Paginate (where .Data.Pages "Type" "posts")}}
+            {{ range $paginator.Pages }}
+                <div class="card">
+                    <a href="{{ .Permalink | absURL }}"><img src="{{ .Permalink | absURL }}/imgs/thumb.jpg" /></a><br/>
+                    <div class="caption">
+                        <a href="{{ .Permalink | absURL }}">{{ .Title }}</a><br/>
+                    </div>
+                </div>
+
+            {{ end }}
+        </div>
+
+        {{ template "_internal/pagination.html" . }}
+
+    </section>
+</main>
+
+{{ end }}

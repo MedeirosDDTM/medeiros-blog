@@ -1,0 +1,41 @@
+@import "vars";
+
+// * {
+//     outline: 1px solid red;
+// }
+
+header#main-header {
+    font-weight: bold;
+    padding-top: 8px;
+    margin-bottom: 40px;
+    background: white;
+    z-index: 1000;
+    > .container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .navigation {
+        a {
+            &, &:hover, &:active, &:visited {
+                color: black;
+                text-decoration: none;
+                padding: 16px;
+            }
+            &:hover {
+                color: $hoverColor;
+                background: linear-gradient(0deg, $hoverColor 0, $hoverColor $underlineHeight, transparent $underlineHeight);
+            }
+        }
+    }
+    img {
+        width: 48px;
+    }
+    ul {
+        margin: 0 auto;
+        list-style: none;
+        display: flex;
+        justify-content: right;
+    }
+}

@@ -1,0 +1,9 @@
+footer {
+    padding: 20px 0;
+    margin-top: 40px;
+    color: rgb(97, 97, 97);
+    > .container {
+        display: flex;
+        justify-content: space-between;
+    }
+}

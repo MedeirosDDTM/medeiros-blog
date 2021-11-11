@@ -1,0 +1,13 @@
+baseURL = "https://medeirosddtm.github.io/medeiros-blog"
+RelativeURLs=true
+CanonifyURLs=true
+languageCode = 'pt-br'
+title = 'Medeiros Blog'
+theme = "medeiros-theme"
+paginate = 12
+
+[taxonomies]
+tag = 'tags'
+
+[outputs]
+	home = [ "HTML", "RSS", "JSON"]

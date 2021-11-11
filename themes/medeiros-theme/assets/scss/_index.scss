@@ -1,0 +1,30 @@
+#index-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    > div {
+        width: calc(50% - 6px);
+    }
+}
+.content-body {
+    overflow: hidden;
+    flex: 1;
+}
+.summary {
+    display: flex;
+    flex-direction: column;
+    p, ul {
+        margin-top: 12px;
+    }
+    h2 {
+        text-align: center;
+    }
+    img {
+        width: 100%;
+        margin-right: 20px;
+        border-radius: 12px;
+    }
+    .btn {
+        margin-top: 20px;
+    }
+}

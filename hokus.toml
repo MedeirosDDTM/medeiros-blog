@@ -1,0 +1,110 @@
+hugover = "0.69.0"
+
+[[serve]]
+key = "default"
+config = "config.toml"
+
+[[build]]
+key = "default"
+config = "config.toml"
+
+[[collections]]
+key = "posts"
+title = "Posts"
+folder = "content/posts/"
+extension = "md"
+dataformat = "toml"
+itemtitle = "Artigo"
+
+  [[collections.fields]]
+  key = "title"
+  title = "Título"
+  type = "string"
+  
+  [[collections.fields]]
+  key = "tags"
+  type = "chips"
+  title = "Tags"
+
+  [[collections.fields]]
+  key = "mainContent"
+  title = "Conteúdo"
+  type = "markdown"
+
+  [[collections.fields]]
+  key = "date"
+  title = "Data de publicação"
+  type = "date"
+
+  [[collections.fields]]
+  key = "draft"
+  title = "Rascunho?"
+  type = "boolean"
+
+  [[collections.fields]]
+  key = "bundle-manager"
+  title = "Imagens"
+  type = "bundle-manager"
+  path = "imgs"
+  extensions = [
+    "png",
+    "jpg",
+    "gif"
+  ]
+
+    [[collections.fields.fields]]
+    key = "title"
+    title = "Título"
+    type = "string"
+
+    [[collections.fields.fields]]
+    key = "description"
+    title = "Descrição"
+    type = "string"
+    multiLine = true
+
+    [[collections.fields.fields]]
+    key = "bundle-image-thumbnail"
+    type = "bundle-image-thumbnail"
+
+[[singles]]
+key = "mainConfig"
+title = "Main Config"
+file = "config.toml"
+dataformat = "toml"
+
+  [[singles.fields]]
+  key = "title"
+  title = "Site Title"
+  type = "string"
+  tip = "Your page title."
+
+  [[singles.fields]]
+  key = "baseURL"
+  title = "Base URL"
+  type = "string"
+  tip = "Your site URL."
+
+  [[singles.fields]]
+  key = "theme"
+  title = "Theme"
+  type = "readonly"
+  tip = "The current theme."
+
+  [[singles.fields]]
+  key = "languageCode"
+  title = "Language Code"
+  type = "readonly"
+
+  [[singles.fields]]
+  key = "googleAnalytics"
+  title = "Google Analytics"
+  type = "string"
+  tip = "Provide a Google Analitics Tracking Code to enable analytics."
+
+  [[singles.fields]]
+  key = "enableRobotsTXT"
+  title = "Enable Robots"
+  type = "boolean"
+  default = true
+  tip = "If you want your page to be indexed, keep this enabled."

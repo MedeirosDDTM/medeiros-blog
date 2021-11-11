@@ -1,0 +1,40 @@
+.card {
+    border: 1px solid rgb(220, 218, 228);
+    box-shadow: 0 2px 5px rgba(110, 109, 116, 0.2);
+    background: white;
+}
+#tag-cloud {
+    display: flex;
+    flex-wrap: wrap;
+    word-break: keep-all;
+    gap: 4px;
+}
+.tag {
+    text-align: center;
+}
+.tag, .btn {
+    flex: 1;
+    white-space:nowrap;
+    padding: 8px;
+    
+}
+.btn {
+    border-radius: 4px;
+    background: rgb(44, 118, 255);
+    &, &:visited, &:active, &:hover {
+        color: white;
+    }
+    display: inline-block;
+}
+.tag {
+    border: 1px solid #d7dee7;
+    transition: .5s all;
+    &, &:visited, &:active, &:hover {
+        color: #78849c;
+    }
+    &:hover {
+        background: rgb(44, 118, 255);
+        color: white;
+        border: 1px solid rgb(44, 118, 255);
+    }
+}

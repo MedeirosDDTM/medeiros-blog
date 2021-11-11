@@ -1,0 +1,10 @@
+{{ if not (eq (len $.Site.Taxonomies.tags) 0) }}    
+<div class="card p20">
+    <h2>Tags:</h2>
+    <div id="tag-cloud">
+        {{ range $name, $taxonomy := $.Site.Taxonomies.tags }}
+            <a class="tag" href="{{ "tags/" | absURL }}{{ $name | urlize }}">{{ $name }}</a>
+        {{ end }}
+    </div>
+</div>
+{{ end }}
